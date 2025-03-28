@@ -2,10 +2,9 @@ before_install:
   - echo "Skipping default build"
 
 install:
-  - mkdir -p /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15
-  - cp adflowtp-2.1.15.aar /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/adflowtp-2.1.15.aar
-  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.15</version><packaging>aar</packaging><name>adflowtp</name><description>A library for adflow</description></project>' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/pom.xml
-  - md5sum adflowtp-2.1.15.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/adflowtp-2.1.15.aar.md5
-  - sha1sum adflowtp-2.1.15.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/adflowtp-2.1.15.aar.sha1
-  - echo "adflowtp-2.1.15.aar=com.adflow.sdk:adflowtp:2.1.15" > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/_remote.repositories
-  - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15  # 调试
+  - mvn install:install-file -Dfile=adflowtp-2.1.16.aar -DgroupId=com.adflow.sdk -DartifactId=adflowtp -Dversion=2.1.16 -Dpackaging=aar -DgeneratePom=true -DlocalRepositoryPath=/home/jitpack/.m2/repository
+  - cp /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.16/adflowtp-2.1.16.pom /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.16/pom.xml
+  - md5sum adflowtp-2.1.16.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.16/adflowtp-2.1.16.aar.md5
+  - sha1sum adflowtp-2.1.16.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.16/adflowtp-2.1.16.aar.sha1
+  - echo "adflowtp-2.1.16.aar=com.adflow.sdk:adflowtp:2.1.16" > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.16/_remote.repositories
+  - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.16  # 调试
