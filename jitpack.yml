@@ -2,6 +2,6 @@ before_install:
   - echo "Skipping default build"
 
 install:
-  - mkdir -p ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9.3
-  - cp adflowtp-2.1.9.aar ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9.3/adflowtp-2.1.9.3.aar
-  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.9.3</version><packaging>aar</packaging></project>' > ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9.3/adflowtp-2.1.9.3.pom
+  - mkdir -p ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.10
+  - cp adflowtp-2.1.10.aar ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.10/adflowtp-2.1.10.aar
+  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.10</version><packaging>aar</packaging></project>' > ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.10/adflowtp-2.1.10.pom
