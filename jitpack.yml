@@ -4,7 +4,7 @@ before_install:
 install:
   - mkdir -p /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14
   - cp adflowtp-2.1.14.aar /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14/adflowtp-2.1.14.aar
-  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.14</version><packaging>aar</packaging></project>' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14/adflowtp-2.1.14.pom
+  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.14</version><packaging>aar</packaging></project>' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14/pom.xml
   - md5sum adflowtp-2.1.14.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14/adflowtp-2.1.14.aar.md5
   - sha1sum adflowtp-2.1.14.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14/adflowtp-2.1.14.aar.sha1
   - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.14  # 调试
