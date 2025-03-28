@@ -1,7 +1,9 @@
 before_install:
-  - echo "Skipping default build"
+  - echo "Skipping default build"  # 禁用 JitPack 的默认构建行为
 
 install:
-  - mkdir -p ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9
-  - cp adflowtp-2.1.9.aar ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9/adflowtp-2.1.9.aar
-  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.9</version><packaging>aar</packaging></project>' > ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9/adflowtp-2.1.9.pom
+  - FILE="-Dfile=adflowtp-2.1.9.aar"
+  - mvn install:install-file $FILE -DgroupId=com.adflow.sdk -DartifactId=adflowtp -Dversion=2.1.9 -Dpackaging=aar -DgeneratePom=true
+  - mkdir -p ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9  # 创建目标目录
+  - cp adflowtp-2.1.9.aar ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9/adflowtp-2.1.9.aar  # 手动复制 .aar
+  - cp /tmp/mvninstall*.pom ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9/adflowtp-2.1.9.pom  # 复制生成的 POM 文件
