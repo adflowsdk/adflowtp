@@ -1,9 +1,7 @@
 before_install:
-  - echo "Skipping default build"  # 禁用 JitPack 的默认构建行为
+  - echo "Skipping default build"
 
 install:
-  - FILE="-Dfile=adflowtp-2.1.9.aar"
-  - mvn install:install-file $FILE -DgroupId=com.adflow.sdk -DartifactId=adflowtp -Dversion=2.1.9 -Dpackaging=aar -DgeneratePom=true -DpomFile=/tmp/adflowtp-2.1.9.pom
-  - mkdir -p ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9
-  - cp adflowtp-2.1.9.aar ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9/adflowtp-2.1.9.aar
-  - cp /tmp/adflowtp-2.1.9.pom ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9/adflowtp-2.1.9.pom
+  - mkdir -p ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9.3
+  - cp adflowtp-2.1.9.aar ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9.3/adflowtp-2.1.9.3.aar
+  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.9.3</version><packaging>aar</packaging></project>' > ~/.m2/repository/com/adflow/sdk/adflowtp/2.1.9.3/adflowtp-2.1.9.3.pom
