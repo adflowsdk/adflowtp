@@ -4,8 +4,8 @@ before_install:
 install:
   - mkdir -p /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15
   - cp adflowtp-2.1.15.aar /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/adflowtp-2.1.15.aar
-  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.15</version><packaging>aar</packaging></project>' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/pom.xml
+  - echo '<project><modelVersion>4.0.0</modelVersion><groupId>com.adflow.sdk</groupId><artifactId>adflowtp</artifactId><version>2.1.15</version><packaging>aar</packaging><name>adflowtp</name><description>A library for adflow</description></project>' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/pom.xml
   - md5sum adflowtp-2.1.15.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/adflowtp-2.1.15.aar.md5
   - sha1sum adflowtp-2.1.15.aar | awk '{print $1}' > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/adflowtp-2.1.15.aar.sha1
-  - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15  # 调试
+  - echo "adflowtp-2.1.15.aar=com.adflow.sdk:adflowtp:2.1.15" > /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15/_remote.repositories
   - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.1.15  # 调试
