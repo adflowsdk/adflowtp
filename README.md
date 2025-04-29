@@ -1,7 +1,10 @@
 AdFlow Ad SDK Integration Documentation
+
 Overview
+
 AdFlow Advertising SDK is an advertising mediation platform that provides an integrated solution for rewarded video and interstitial ads for mobile app developers. This SDK needs to be used in conjunction with the TOPON platform. It only requires the initialization and loading/displaying of ads using topon, and no additional operations are required. This SDK does not contain any gambling, adult or other illegal advertising content and is fully compliant with all app store policies.
 Features:
+
 1.Supports Rewarded Video Ads
 ﻿
 2.Supports Interstitial Ads
@@ -35,7 +38,7 @@ INSTALLATION
 
 Adflow SDKs are published to jitpack as independent modules. To utilize a feature listed above include the appropriate dependency (or dependencies) listed below in your app/build.gradle file.
 
-dependencies {
+dependencies {\n
     implementation 'com.github.adflowsdk:adflowtp:2.2.5'
 }
 
