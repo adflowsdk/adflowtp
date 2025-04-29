@@ -30,3 +30,17 @@ Important Notes:
 
 How to Use:
 This SDK is similar to admob and is directly integrated into the TOPON platform. Therefore, only TOPON initialization and loading of advertising code are required, and no additional operations are needed to use it
+
+INSTALLATION
+Adflow SDKs are published to jitpack as independent modules. To utilize a feature listed above include the appropriate dependency (or dependencies) listed below in your app/build.gradle file.
+dependencies {
+    implementation 'com.github.adflowsdk:adflowtp:2.2.5'
+}
+
+You may also need to add the following to your project/build.gradle file.
+
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
