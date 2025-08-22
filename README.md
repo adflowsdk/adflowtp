@@ -60,7 +60,7 @@ Adflow SDKs are published to jitpack as independent modules. To utilize a featur
 
 dependencies {
 
-    implementation 'com.github.adflowsdk:adflowtp:2.2.5'
+    implementation 'com.github.adflowsdk:adflowtp:2.2.6'
     
 }
 
