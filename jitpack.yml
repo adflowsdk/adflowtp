@@ -2,5 +2,5 @@ before_install:
   - echo "Skipping default build"
 
 install:
-  - mvn install:install-file -Dfile=adflowtp-2.2.7.aar -DgroupId=com.adflow.sdk -DartifactId=adflowtp -Dversion=2.2.7 -Dpackaging=aar -DgeneratePom=true -DlocalRepositoryPath=/home/jitpack/.m2/repository
-  - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.2.7  # 调试
+  - mvn install:install-file -Dfile=adflowtp-2.2.8.aar -DgroupId=com.adflow.sdk -DartifactId=adflowtp -Dversion=2.2.8 -Dpackaging=aar -DgeneratePom=true -DlocalRepositoryPath=/home/jitpack/.m2/repository
+  - ls -l /home/jitpack/.m2/repository/com/adflow/sdk/adflowtp/2.2.8  # 调试
