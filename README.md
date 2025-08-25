@@ -60,10 +60,10 @@ Adflow SDKs are published to jitpack as independent modules. To utilize a featur
 
 dependencies {
 
-    implementation 'com.github.adflowsdk:adflowtp:2.2.9'
+    implementation 'com.github.adflowsdk:adflowtp:2.2.10'
     
 }
-Note: 'com.github.adflowsdk:adflowtp:2.2.9' is based on the TopOn version library: com.anythink.sdk:core-tpn:6.4.87
+Note: 'com.github.adflowsdk:adflowtp:2.2.10' is based on the TopOn version library: com.anythink.sdk:core-tpn:6.4.87
 Please use the corresponding version. If the version is different, please contact customer service.
 
 You may also need to add the following to your project/build.gradle file.
